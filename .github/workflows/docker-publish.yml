@@ -28,14 +28,14 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t votre_utilisateur/sysinfo-api:0.0.3 .
+          docker build -t nemoow/sysinfo-api:0.0.2 .
           TAGGER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          docker tag votre_utilisateur/sysinfo-api:0.0.3 ghcr.io/$TAGGER/sysinfo-api:0.0.3
+          docker tag nemoow/sysinfo-api:0.0.2 ghcr.io/$TAGGER/sysinfo-api:0.0.2
 
       - name: Push image to Docker Hub
-        run: docker push votre_utilisateur/sysinfo-api:0.0.3
+        run: docker push nemoow/sysinfo-api:0.0.2
 
       - name: Push image to GitHub Container Registry
         run: |
           TAGGER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          docker push ghcr.io/$TAGGER/sysinfo-api:0.0.3
+          docker push ghcr.io/$TAGGER/sysinfo-api:0.0.2
