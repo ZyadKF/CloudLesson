@@ -11,8 +11,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]  # Mettez la version Node utilisée en dev
-
+        node-version: [18.18.2]  
+        
     steps:
       - uses: actions/checkout@v5
 
