@@ -14,7 +14,7 @@ async function getSystemInfo() {
 
   return { cpu, mem, os, disk, network };
 }
-
+//
 // Fonction pour ajouter headers CORS (exemple simple)
 function setCorsHeaders(res: http.ServerResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');

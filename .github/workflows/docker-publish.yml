@@ -39,3 +39,5 @@ jobs:
         run: |
           TAGGER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           docker push ghcr.io/$TAGGER/sysinfo-api:0.0.2
+
+
