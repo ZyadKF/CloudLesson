@@ -11,6 +11,7 @@ async function getSystemInfo() {
   const os = await si.osInfo();
   const disk = await si.diskLayout();
   const network = await si.networkInterfaces();
+  console.log(`Je suis en haut`)
 
   return { cpu, mem, os, disk, network };
 }
@@ -56,5 +57,6 @@ if (require.main === module) {
   const server = http.createServer(requestHandler);
   server.listen(PORT, () => {
     console.log(`Serveur démarré sur le port ${PORT}`);
+    console.log(`Modification effectuée`);
   });
 }
